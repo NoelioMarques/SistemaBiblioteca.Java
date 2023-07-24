@@ -14,7 +14,7 @@ public class Biblioteca {
 	}
 	
 	public void emprestarLivro(Livro livro, Usuario usuario) {
-		if(livros.contains(livro)) {
+		if(livros.contains(livro) && livro.estaDisponivel()) {
 			livro.Emprestar();
 			System.out.println("Emprestimo para " + usuario.getNome() + "ID: " +  usuario.getId() + " realizada com sucesso.");
 		} else {
